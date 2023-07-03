@@ -19,3 +19,22 @@ class Solution{
     }
     
 };
+
+
+//APPROACH-2
+class Solution{
+  public:
+    int missingNumber(vector<int>& array, int n) {
+        // Your code goes here
+        sort(array.begin(),array.end());
+        for(int i=0;i<n;i++){
+            if(array[i]==i+1){
+                continue ;
+            }
+            else{
+                return i+1;
+            }
+            
+        }
+    }
+};
